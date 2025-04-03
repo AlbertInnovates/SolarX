@@ -1,0 +1,8 @@
+import firebase_admin
+from firebase_admin import credentials, db
+
+cred = credentials.Certificate("path_to_firebase_key.json")
+firebase_admin.initialize_app(cred, {'databaseURL': 'https://your-database.firebaseio.com'})
+
+ref = db.reference("/solar_data")
+ref.set({"voltage": 3.7, "current": 0.55, "temperature": 27})
