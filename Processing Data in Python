@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample data (Replace with real-time collected data)
+data = {
+    "Time": [1, 2, 3, 4, 5],
+    "Voltage": [3.5, 3.6, 3.7, 3.8, 3.9],
+    "Current": [0.5, 0.6, 0.55, 0.57, 0.6],
+    "Temperature": [25, 26, 27, 27.5, 28]
+}
+
+df = pd.DataFrame(data)
+plt.plot(df["Time"], df["Voltage"], label="Voltage")
+plt.plot(df["Time"], df["Current"], label="Current")
+plt.legend()
+plt.show()
